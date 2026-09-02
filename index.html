@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Kongu Temple Matrimony</title>
+
+    <meta name="description"
+          content="Kongu Temple Matrimony - Trusted Matrimony Service for Kongu Community">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fffaf3;
+            color: #3b2920;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1180px;
+            margin: auto;
+        }
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .topbar {
+            background: #5b1717;
+            color: white;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .navbar {
+            min-height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: #8b1e1e;
+            color: #ffd36a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+
+        .logo h1 {
+            font-size: 21px;
+            color: #8b1e1e;
+        }
+
+        .logo p {
+            font-size: 12px;
+            color: #777;
+        }
+
+        .menu {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            list-style: none;
+        }
+
+        .menu a {
+            color: #3b2920;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .menu a:hover {
+            color: #a66b00;
+        }
+
+        .register-button {
+            background: #8b1e1e !important;
+            color: white !important;
+            padding: 11px 20px;
+            border-radius: 25px;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(85, 20, 20, 0.88),
+                    rgba(85, 20, 20, 0.88)
+                ),
+                linear-gradient(
+                    135deg,
+                    #8b1e1e,
+                    #d39b35
+                );
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.12);
+            padding: 9px 20px;
+            border-radius: 30px;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .hero h2 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 22px;
+        }
+
+        .hero h2 span {
+            color: #ffd36a;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 720px;
+            margin: 0 auto 32px;
+            color: #fff7eb;
+        }
+
+        .hero-button {
+            display: inline-block;
+            background: #f4b41a;
+            color: #4b2600;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .hero-button:hover {
+            background: #ffd55f;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        section {
+            padding: 75px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-size: 35px;
+            color: #8b1e1e;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #756b64;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            background: #fff8ea;
+            border-radius: 18px;
+            padding: 40px;
+            border-top: 5px solid #c48a17;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .about-box p {
+            font-size: 18px;
+            color: #55483f;
+        }
+
+        /* =========================
+           PLANS
+        ========================= */
+
+        .plans {
+            background: #fff5e4;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .plan {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 22px rgba(0,0,0,0.08);
+            border: 1px solid #eadcc8;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan.featured {
+            border: 3px solid #c48a17;
+            transform: translateY(-8px);
+        }
+
+        .plan-header {
+            background: #8b1e1e;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .plan.featured .plan-header {
+            background: #b77700;
+        }
+
+        .plan-header h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 38px;
+            font-weight: bold;
+            color: #ffd36a;
+        }
+
+        .duration {
+            font-size: 14px;
+            margin-top: 3px;
+        }
+
+        .plan-body {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan-body ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .plan-body li {
+            padding: 9px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+
+        .plan-body li::before {
+            content: "✓";
+            color: #8b1e1e;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .plan-button {
+            margin-top: auto;
+            display: block;
+            text-align: center;
+            background: #8b1e1e;
+            color: white;
+            padding: 12px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .plan-button:hover {
+            background: #641313;
+        }
+
+        /* =========================
+           HOW IT WORKS
+        ========================= */
+
+        .how-it-works {
+            background: white;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .step {
+            text-align: center;
+            background: #fff9ef;
+            padding: 30px 20px;
+            border-radius: 15px;
+            border: 1px solid #eee0ca;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 18px;
+            background: #8b1e1e;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .step h3 {
+            color: #8b1e1e;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            color: #6d625b;
+            font-size: 14px;
+        }
+
+        /* =========================
+           REGISTER CTA
+        ========================= */
+
+        .cta {
+            background:
+                linear-gradient(
+                    rgba(86,20,20,0.95),
+                    rgba(86,20,20,0.95)
+                );
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 38px;
+            color: #ffd36a;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: auto auto 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #f4b41a;
+            color: #4b2600;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #fff5e4;
+        }
+
+        .contact-box {
+            background: white;
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .contact-box h3 {
+            color: #8b1e1e;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            margin: 12px 0;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #6d625b;
+            font-size: 13px;
+        }
+
+        .contact-item a {
+            color: #8b1e1e;
+            font-weight: bold;
+        }
+
+        /* =========================
+           POLICIES
+        ========================= */
+
+        .policies {
+            background: white;
+        }
+
+        .policy {
+            max-width: 900px;
+            margin: 0 auto 20px;
+            padding: 25px;
+            background: #fffaf2;
+            border-left: 4px solid #c48a17;
+            border-radius: 8px;
+        }
+
+        .policy h3 {
+            color: #8b1e1e;
+            margin-bottom: 8px;
+        }
+
+        .policy p {
+            color: #655b53;
+            font-size: 14px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #461010;
+            color: #ddd;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            color: #ffd36a;
+            margin-bottom: 8px;
+        }
+
+        .footer-menu {
+            margin: 20px 0;
+        }
+
+        .footer-menu a {
+            color: #ddd;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .footer-menu a:hover {
+            color: #ffd36a;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 18px;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #bbb;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .plans-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .menu {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .topbar-content {
+                justify-content: center;
+            }
+
+            .topbar-content span:last-child {
+                display: none;
+            }
+
+            .navbar {
+                justify-content: center;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .hero {
+                min-height: 560px;
+            }
+
+            .hero h2 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .plan.featured {
+                transform: none;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading h2 {
+                font-size: 28px;
+            }
+
+            .about-box {
+                padding: 25px;
+            }
+
+            .cta h2 {
+                font-size: 30px;
+            }
+
+            .contact-box {
+                padding: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="topbar">
+
+    <div class="container topbar-content">
+
+        <span>
+            🙏 Trusted Matrimony Service for Kongu Community
+        </span>
+
+        <span>
+            Kongu Temple Matrimony
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+
+            <div class="logo-icon">
+                🛕
+            </div>
+
+            <div>
+                <h1>Kongu Temple Matrimony</h1>
+
+                <p>
+                    Trusted Matrimony Service for Kongu Community
+                </p>
+            </div>
+
+        </a>
+
+
+        <ul class="menu">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#plans">Plans</a>
+            </li>
+
+            <li>
+                <a href="#how-it-works">How It Works</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+            <li>
+                <a href="#plans" class="register-button">
+                    Register
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <div class="hero-badge">
+            💍 Kongu Community Matrimony
+        </div>
+
+        <h2>
+            Find Your Life Partner
+            <span>with Trust & Tradition</span>
+        </h2>
+
+        <p>
+            A community-focused matrimonial service helping
+            individuals and families discover suitable life partners.
+        </p>
+
+        <a href="#plans" class="hero-button">
+            Register Now – ₹49
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                About Kongu Temple Matrimony
+            </h2>
+
+            <p>
+                Connecting individuals and families through a
+                trusted community-focused matrimonial platform.
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <p>
+                Kongu Temple Matrimony is an online matrimonial
+                service designed to help individuals and families
+                find suitable life partners through a trusted and
+                community-focused platform.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MEMBERSHIP PLANS
+========================= -->
+
+<section class="plans" id="plans">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Membership & Pricing
+            </h2>
+
+            <p>
+                Choose a service according to your requirements.
+            </p>
+
+        </div>
+
+
+        <div class="plans-grid">
+
+
+            <!-- REGISTRATION -->
+
+            <div class="plan">
+
+                <div class="plan-header">
+
+                    <h3>
+                        Registration
+                    </h3>
+
+                    <div class="price">
+                        ₹49
+                    </div>
+
+                    <div class="duration">
+                        One-time
+                    </div>
+
+                </div>
+
+
+                <div class="plan-body">
+
+                    <ul>
+
+                        <li>
+                            Account activation
+                        </li>
+
+                        <li>
+                            Matrimonial profile registration
+                        </li>
+
+                        <li>
+                            Profile listing
+                        </li>
+
+                    </ul>
+
+                    <a href="#contact" class="plan-button">
+                        Register – ₹49
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BASIC -->
+
+            <div class="plan">
+
+                <div class="plan-header">
+
+                    <h3>
+                        Basic
+                    </h3>
+
+                    <div class="price">
+                        ₹249
+                    </div>
+
+                    <div class="duration">
+                        6 Months
+                    </div>
+
+                </div>
+
+
+                <div class="plan-body">
+
+                    <ul>
+
+                        <li>
+                            5 contact requests/month
+                        </li>
+
+                        <li>
+                            Profile browsing
+                        </li>
+
+                        <li>
+                            Matrimonial profile access
+                        </li>
+
+                    </ul>
+
+                    <a href="#contact" class="plan-button">
+                        Choose Basic
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PREMIUM -->
+
+            <div class="plan featured">
+
+                <div class="plan-header">
+
+                    <h3>
+                        Premium
+                    </h3>
+
+                    <div class="price">
+                        ₹449
+                    </div>
+
+                    <div class="duration">
+                        6 Months
+                    </div>
+
+                </div>
+
+
+                <div class="plan-body">
+
+                    <ul>
+
+                        <li>
+                            10 contact requests/month
+                        </li>
+
+                        <li>
+                            Profile browsing
+                        </li>
+
+                        <li>
+                            Enhanced profile visibility
+                        </li>
+
+                    </ul>
+
+                    <a href="#contact" class="plan-button">
+                        Choose Premium
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PREMIUM PLUS -->
+
+            <div class="plan">
+
+                <div class="plan-header">
+
+                    <h3>
+                        Premium Plus
+                    </h3>
+
+                    <div class="price">
+                        ₹949
+                    </div>
+
+                    <div class="duration">
+                        6 Months
+                    </div>
+
+                </div>
+
+
+                <div class="plan-body">
+
+                    <ul>
+
+                        <li>
+                            20 contact requests/month
+                        </li>
+
+                        <li>
+                            Priority profile visibility
+                        </li>
+
+                        <li>
+                            Profile image visibility
+                        </li>
+
+                    </ul>
+
+                    <a href="#contact" class="plan-button">
+                        Choose Premium Plus
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section class="how-it-works" id="how-it-works">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                How It Works
+            </h2>
+
+            <p>
+                Start your matrimonial journey in four simple steps.
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+
+            <!-- STEP 1 -->
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <h3>
+                    Register
+                </h3>
+
+                <p>
+                    Create your matrimonial profile.
+                </p>
+
+            </div>
+
+
+            <!-- STEP 2 -->
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>
+                    Browse
+                </h3>
+
+                <p>
+                    Explore suitable matrimonial profiles.
+                </p>
+
+            </div>
+
+
+            <!-- STEP 3 -->
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>
+                    Choose a Plan
+                </h3>
+
+                <p>
+                    Select a membership plan according to
+                    your requirements.
+                </p>
+
+            </div>
+
+
+            <!-- STEP 4 -->
+
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <h3>
+                    Connect
+                </h3>
+
+                <p>
+                    Request contact and connect with
+                    suitable profiles.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CALL TO ACTION
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Begin Your Matrimonial Journey
+        </h2>
+
+        <p>
+            Create your profile and discover suitable
+            matrimonial connections through Kongu Temple Matrimony.
+        </p>
+
+        <a href="#plans" class="cta-button">
+            Register Now – ₹49
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Contact Us
+            </h2>
+
+            <p>
+                Kongu Temple Matrimony
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>
+                Kongu Temple Matrimony
+            </h3>
+
+
+            <div class="contact-item">
+
+                <strong>
+                    Email
+                </strong>
+
+                <a href="mailto:info@kongutemple.in">
+                    info@kongutemple.in
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>
+                    Website
+                </strong>
+
+                <a href="https://kongutemple.in">
+                    https://kongutemple.in
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>
+                    Matrimony Service
+                </strong>
+
+                Kongu Community Matrimony
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     POLICIES
+========================= -->
+
+<section class="policies">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Policies
+            </h2>
+
+            <p>
+                Please read our policies before using the service.
+            </p>
+
+        </div>
+
+
+        <!-- PRIVACY -->
+
+        <div class="policy" id="privacy">
+
+            <h3>
+                Privacy Policy
+            </h3>
+
+            <p>
+                Kongu Temple Matrimony respects the privacy of
+                its users. Information submitted during registration
+                is intended to provide matrimonial services and
+                improve the user experience. Users should provide
+                accurate information and should not share sensitive
+                personal information unnecessarily.
+            </p>
+
+        </div>
+
+
+        <!-- TERMS -->
+
+        <div class="policy" id="terms">
+
+            <h3>
+                Terms & Conditions
+            </h3>
+
+            <p>
+                By using Kongu Temple Matrimony, users agree to
+                provide accurate information and use the service
+                responsibly. The service is intended for legitimate
+                matrimonial purposes. Users are responsible for
+                verifying information and communicating with other
+                members appropriately.
+            </p>
+
+        </div>
+
+
+        <!-- REFUND -->
+
+        <div class="policy" id="refund">
+
+            <h3>
+                Refund Policy
+            </h3>
+
+            <p>
+                Registration and membership payments are subject
+                to the applicable refund terms of Kongu Temple
+                Matrimony. Users should review the applicable
+                payment and refund conditions before completing
+                a purchase. Any eligible refund request can be
+                submitted through the official contact email.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div class="footer-logo">
+            🛕 Kongu Temple Matrimony
+        </div>
+
+        <p>
+            Trusted Matrimony Service for Kongu Community
+        </p>
+
+
+        <div class="footer-menu">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#plans">
+                Plans
+            </a>
+
+            <a href="#how-it-works">
+                How It Works
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a href="#privacy">
+                Privacy Policy
+            </a>
+
+            <a href="#terms">
+                Terms & Conditions
+            </a>
+
+            <a href="#refund">
+                Refund Policy
+            </a>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Kongu Temple Matrimony.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
